@@ -2,12 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1e3a8a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title id="page-title">مركز الصيانة المعتمد</title>
+    <title>مركز الصيانة المعتمد</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, Arial, sans-serif; }
         body { background-color: #cbd5e1; display: flex; justify-content: center; }
 
         .app-shell {
@@ -16,7 +15,6 @@
             box-shadow: 0 0 35px rgba(0,0,0,0.15);
         }
 
-        /* الهيدر */
         .top-bar {
             background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
             color: white; padding: 25px 20px 38px;
@@ -27,7 +25,6 @@
         .logo span { background: #f97316; padding: 2px 8px; border-radius: 8px; font-size: 12px; margin-right: 5px; }
         .live-badge { background: rgba(255,255,255,0.18); padding: 5px 10px; border-radius: 20px; font-size: 11px; }
 
-        /* بطاقة العرض */
         .promo-banner {
             background: linear-gradient(90deg, #f97316, #fb923c);
             color: white; margin: -22px 18px 20px; padding: 14px 18px;
@@ -40,7 +37,6 @@
         .content { padding: 0 18px; }
         .sec-head { font-size: 16px; font-weight: bold; margin: 15px 0 12px; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
 
-        /* شبكة الأجهزة */
         .grid-devices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
         .dev-card {
             background: white; border: 2px solid transparent; border-radius: 16px;
@@ -55,7 +51,6 @@
         .dev-card.active { border-color: #2563eb; background: #eff6ff; transform: translateY(-2px); }
         .dev-card.active .icon-box { background: #2563eb; color: white; }
 
-        /* أزرار الأعطال السريعة */
         .chips-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
         .chip {
             background: white; border: 1px solid #cbd5e1; padding: 6px 12px;
@@ -63,7 +58,6 @@
         }
         .chip.selected { background: #0f172a; color: white; border-color: #0f172a; }
 
-        /* الحقول */
         .form-card { background: white; padding: 18px; border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .field { margin-bottom: 14px; }
         .field label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px; color: #0f172a; }
@@ -79,9 +73,7 @@
             color: white; font-size: 16px; font-weight: bold; cursor: pointer;
             box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
         }
-        .btn-submit:disabled { background: #94a3b8; cursor: not-allowed; }
 
-        /* الشريط السفلي الثابت */
         .bottom-nav {
             position: fixed; bottom: 0; width: 100%; max-width: 430px;
             background: white; border-top: 1px solid #e2e8f0; display: flex;
@@ -94,7 +86,6 @@
         .nav-item span { font-size: 20px; }
         .nav-item.active { color: #2563eb; }
 
-        /* لوحة الإدارة */
         .kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
         .kpi-card { background: white; padding: 12px 6px; border-radius: 14px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.04); }
         .kpi-card h2 { font-size: 18px; margin-bottom: 3px; }
@@ -111,7 +102,7 @@
         .pill-wait { background: #ffedd5; color: #c2410c; }
         .pill-ok { background: #dcfce7; color: #15803d; }
         .ticket-body p { margin: 5px 0; font-size: 13px; color: #334155; }
-        
+
         .price-box {
             display: flex; gap: 8px; margin-top: 10px; background: #f1f5f9;
             padding: 8px; border-radius: 10px; align-items: center;
@@ -135,30 +126,28 @@
 <div class="app-shell">
     <div class="top-bar">
         <div class="top-flex">
-            <div class="logo" id="app-brand-name">مركز الصيانة <span>معتمد</span></div>
-            <div class="live-badge">🟢 فنيون متاحون</div>
+            <div class="logo">مركز الصيانة <span>معتمد</span></div>
+            <div class="live-badge">فنيون متاحون</div>
         </div>
-        <p style="margin-top: 10px; font-size: 13px; opacity: 0.9;">أهلاً بك! اطلب فني صيانة محترف لباب بيتك في دقائق</p>
+        <p style="margin-top: 10px; font-size: 13px; opacity: 0.9;">اطلب فني صيانة محترف لباب بيتك في دقائق</p>
     </div>
 
     <div class="promo-banner">
         <div>
-            <h3>🎁 خصم 20% على أول طلب صيانة</h3>
+            <h3>خصم 20% على أول طلب صيانة</h3>
             <p>ضمان حقيقي 3 شهور على جميع قطع الغيار</p>
         </div>
-        <div style="font-size: 26px;">⚡</div>
     </div>
 
-    <!-- شاشة العميل -->
     <div id="view-client" class="content">
         <div class="sec-head">1. ما هو الجهاز المعطل؟</div>
         <div class="grid-devices">
-            <div class="dev-card active" onclick="pickDevice(this, 'غسالة ملابس')"><div class="icon-box">🧺</div><p>غسالة</p></div>
-            <div class="dev-card" onclick="pickDevice(this, 'ثلاجة')"><div class="icon-box">❄️</div><p>ثلاجة</p></div>
-            <div class="dev-card" onclick="pickDevice(this, 'تكييف')"><div class="icon-box">🌬️</div><p>تكييف</p></div>
-            <div class="dev-card" onclick="pickDevice(this, 'بوتاجاز')"><div class="icon-box">🔥</div><p>بوتاجاز</p></div>
-            <div class="dev-card" onclick="pickDevice(this, 'سخان')"><div class="icon-box">🚿</div><p>سخان</p></div>
-            <div class="dev-card" onclick="pickDevice(this, 'شاشة')"><div class="icon-box">📺</div><p>شاشة</p></div>
+            <div class="dev-card active" onclick="pickDevice(this, 'غسالة ملابس')"><div class="icon-box">غ</div><p>غسالة</p></div>
+            <div class="dev-card" onclick="pickDevice(this, 'ثلاجة')"><div class="icon-box">ث</div><p>ثلاجة</p></div>
+            <div class="dev-card" onclick="pickDevice(this, 'تكييف')"><div class="icon-box">ت</div><p>تكييف</p></div>
+            <div class="dev-card" onclick="pickDevice(this, 'بوتاجاز')"><div class="icon-box">ب</div><p>بوتاجاز</p></div>
+            <div class="dev-card" onclick="pickDevice(this, 'سخان')"><div class="icon-box">س</div><p>سخان</p></div>
+            <div class="dev-card" onclick="pickDevice(this, 'شاشة')"><div class="icon-box">ش</div><p>شاشة</p></div>
         </div>
 
         <div class="sec-head">2. حدد العطل (اختيار سريع)</div>
@@ -187,15 +176,14 @@
                 <label>العنوان بالتفصيل</label>
                 <input type="text" id="c-address" placeholder="المنطقة - الشارع - رقم العقار">
             </div>
-            <button class="btn-submit" id="send-btn" onclick="submitOrder()">إرسال طلب الصيانة الآن 🚀</button>
+            <button class="btn-submit" id="send-btn" onclick="submitOrder()">إرسال طلب الصيانة الآن</button>
         </div>
     </div>
 
-    <!-- شاشة الإدارة -->
     <div id="view-admin" class="content hidden">
         <div class="sec-head">
-            <span>📊 لوحة تحكم المدير</span>
-            <button class="refresh-btn" onclick="loadTickets()">🔄 تحديث</button>
+            <span>لوحة تحكم المدير</span>
+            <button class="refresh-btn" onclick="loadTickets()">تحديث</button>
         </div>
         <div class="kpi-row">
             <div class="kpi-card"><h2 id="k-wait" style="color:#f97316">0</h2><p>قيد الانتظار</p></div>
@@ -205,53 +193,195 @@
         <div id="tickets-container"></div>
     </div>
 
-    <!-- الشريط السفلي -->
     <div class="bottom-nav">
         <button class="nav-item active" id="nav-client" onclick="goClient()"><span>🏠</span>الرئيسية</button>
-        <button class="nav-item" id="nav-admin" onclick="goAdmin()"><span>🔐</span>الإدارة</button>
+        <button class="nav-item" id="nav-admin" onclick="goAdmin()"><span>🔒</span>الإدارة</button>
     </div>
 </div>
 
 <script>
-    // ==========================================
-    // إعداداتك الخاصة
-    // ==========================================
-    const MY_APP_NAME = "مركز الصيانة";
-    const MY_APP_TAG  = "معتمد";
-    const ADMIN_PIN   = "9988";
-    const DB_URL      = "https://fix-pro-8ed93-default-rtdb.firebaseio.com/orders";
-    // ==========================================
+    const ADMIN_PIN = "9988";
+    const DB_URL = "https://fix-pro-8ed93-default-rtdb.firebaseio.com/orders";
 
-    document.getElementById('page-title').innerText = MY_APP_NAME;
-    document.getElementById('app-brand-name').innerHTML = `${MY_APP_NAME} <span>${MY_APP_TAG}</span>`;
-
-    let currentDevice = 'غسالة ملابس';
+    let currentDevice = "غسالة ملابس";
     let selectedChips = [];
 
     function pickDevice(el, name) {
-        document.querySelectorAll('.dev-card').forEach(c => c.classList.remove('active'));
-        el.classList.add('active');
+        document.querySelectorAll(".dev-card").forEach(function(c) { c.classList.remove("active"); });
+        el.classList.add("active");
         currentDevice = name;
     }
 
     function toggleChip(el) {
-        el.classList.toggle('selected');
+        el.classList.toggle("selected");
         const txt = el.innerText;
-        if (selectedChips.includes(txt)) {
-            selectedChips = selectedChips.filter(i => i !== txt);
+        if (selectedChips.indexOf(txt) > -1) {
+            selectedChips = selectedChips.filter(function(i) { return i !== txt; });
         } else {
             selectedChips.push(txt);
         }
     }
 
     function goClient() {
-        document.getElementById('view-client').classList.remove('hidden');
-        document.getElementById('view-admin').classList.add('hidden');
-        document.getElementById('nav-client').classList.add('active');
-        document.getElementById('nav-admin').classList.remove('active');
+        document.getElementById("view-client").classList.remove("hidden");
+        document.getElementById("view-admin").classList.add("hidden");
+        document.getElementById("nav-client").classList.add("active");
+        document.getElementById("nav-admin").classList.remove("active");
     }
 
     function goAdmin() {
         const pin = prompt("أدخل رمز الدخول للإدارة:");
         if (pin === ADMIN_PIN) {
-            document.getElementById('view-client').class
+            document.getElementById("view-client").classList.add("hidden");
+            document.getElementById("view-admin").classList.remove("hidden");
+            document.getElementById("nav-client").classList.remove("active");
+            document.getElementById("nav-admin").classList.add("active");
+            loadTickets();
+        } else if (pin !== null) {
+            alert("الرمز غير صحيح");
+        }
+    }
+
+    async function submitOrder() {
+        const name = document.getElementById("c-name").value.trim();
+        const phone = document.getElementById("c-phone").value.trim();
+        const address = document.getElementById("c-address").value.trim();
+        const extra = document.getElementById("c-issue").value.trim();
+        const btn = document.getElementById("send-btn");
+
+        if (!name || !phone || !address) {
+            alert("برجاء إدخال الاسم ورقم الموبايل والعنوان.");
+            return;
+        }
+
+        const fullIssue = selectedChips.concat(extra ? [extra] : []).join(" - ") || "فحص عام";
+
+        const order = {
+            device: currentDevice,
+            name: name,
+            phone: phone,
+            address: address,
+            issue: fullIssue,
+            price: 0,
+            status: "قيد الانتظار",
+            createdAt: Date.now(),
+            time: new Date().toLocaleString("ar-EG")
+        };
+
+        btn.disabled = true;
+        btn.innerText = "جاري إرسال الطلب...";
+
+        try {
+            const response = await fetch(DB_URL + ".json", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(order)
+            });
+
+            if (response.ok) {
+                alert("تم إرسال طلبك بنجاح! سيتواصل معك الفني خلال دقائق.");
+                document.getElementById("c-name").value = "";
+                document.getElementById("c-phone").value = "";
+                document.getElementById("c-address").value = "";
+                document.getElementById("c-issue").value = "";
+                selectedChips = [];
+                document.querySelectorAll(".chip").forEach(function(c) { c.classList.remove("selected"); });
+            } else {
+                alert("حدث خطأ أثناء الإرسال.");
+            }
+        } catch (error) {
+            alert("تعذر الاتصال بالإنترنت.");
+        } finally {
+            btn.disabled = false;
+            btn.innerText = "إرسال طلب الصيانة الآن";
+        }
+    }
+
+    async function loadTickets() {
+        const box = document.getElementById("tickets-container");
+        box.innerHTML = "<div style=\"text-align:center; padding:30px; color:#64748b;\">جاري تحميل الطلبات...</div>";
+
+        try {
+            const response = await fetch(DB_URL + ".json");
+            const data = await response.json();
+
+            if (!data) {
+                document.getElementById("k-wait").innerText = 0;
+                document.getElementById("k-done").innerText = 0;
+                document.getElementById("k-money").innerText = "0 ج.م";
+                box.innerHTML = "<div style=\"text-align:center; padding:40px 10px; color:#94a3b8;\">لا توجد طلبات صيانة حالياً</div>";
+                return;
+            }
+
+            const list = Object.keys(data).map(function(key) {
+                return Object.assign({ fbKey: key }, data[key]);
+            }).sort(function(a, b) { return (b.createdAt || 0) - (a.createdAt || 0); });
+
+            const waitCount = list.filter(function(i) { return i.status !== "تم الإصلاح"; }).length;
+            const doneList = list.filter(function(i) { return i.status === "تم الإصلاح"; });
+            const totalMoney = doneList.reduce(function(sum, item) { return sum + (Number(item.price) || 0); }, 0);
+
+            document.getElementById("k-wait").innerText = waitCount;
+            document.getElementById("k-done").innerText = doneList.length;
+            document.getElementById("k-money").innerText = totalMoney + " ج.م";
+
+            box.innerHTML = list.map(function(o) {
+                const isDone = o.status === "تم الإصلاح";
+                return "<div class=\"ticket " + (isDone ? "completed" : "") + "\">" +
+                    "<div class=\"ticket-top\">" +
+                        "<span class=\"ticket-title\">" + o.device + " • " + o.name + "</span>" +
+                        "<span class=\"pill " + (isDone ? "pill-ok" : "pill-wait") + "\">" + o.status + "</span>" +
+                    "</div>" +
+                    "<div class=\"ticket-body\">" +
+                        "<p><b>الهاتف:</b> " + o.phone + "</p>" +
+                        "<p><b>العنوان:</b> " + o.address + "</p>" +
+                        "<p><b>العطل:</b> " + o.issue + "</p>" +
+                        "<p style=\"font-size:11px; color:#94a3b8;\">" + (o.time || "") + "</p>" +
+                    "</div>" +
+                    "<div class=\"price-box\">" +
+                        "<input type=\"number\" id=\"price-" + o.fbKey + "\" value=\"" + (o.price || "") + "\" placeholder=\"أدخل تكلفة الصيانة (ج.م)\">" +
+                        "<button onclick=\"savePrice('" + o.fbKey + "')\">حفظ السعر</button>" +
+                    "</div>" +
+                    "<div class=\"ticket-btns\">" +
+                        "<button class=\"t-btn\" style=\"background:#10b981;\" onclick=\"finishOrder('" + o.fbKey + "')\">تم الإصلاح</button>" +
+                        "<a class=\"t-btn\" style=\"background:#2563eb;\" href=\"tel:" + o.phone + "\">اتصال</a>" +
+                        "<a class=\"t-btn\" style=\"background:#25D366;\" href=\"https://wa.me/2" + o.phone + "\" target=\"_blank\">واتساب</a>" +
+                        "<button class=\"t-btn\" style=\"background:#ef4444;\" onclick=\"removeOrder('" + o.fbKey + "')\">حذف</button>" +
+                    "</div>" +
+                "</div>";
+            }).join("");
+        } catch (err) {
+            box.innerHTML = "<div style=\"text-align:center; padding:30px; color:#ef4444;\">خطأ في تحميل البيانات</div>";
+        }
+    }
+
+    async function savePrice(fbKey) {
+        const val = document.getElementById("price-" + fbKey).value;
+        await fetch(DB_URL + "/" + fbKey + ".json", {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ price: Number(val) })
+        });
+        alert("تم حفظ السعر بنجاح!");
+        loadTickets();
+    }
+
+    async function finishOrder(fbKey) {
+        await fetch(DB_URL + "/" + fbKey + ".json", {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ status: "تم الإصلاح" })
+        });
+        loadTickets();
+    }
+
+    async function removeOrder(fbKey) {
+        if (confirm("حذف هذا الطلب نهائياً؟")) {
+            await fetch(DB_URL + "/" + fbKey + ".json", { method: "DELETE" });
+            loadTickets();
+        }
+    }
+</script>
+
+</body>
+</html>
